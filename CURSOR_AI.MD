@@ -6,7 +6,7 @@
 
 ## 2. Move Image in Appropirate Directory & Make the AppImage Executable
 ```bash
-sudo mv ~/Downloads/Cursor-0.49.6-x86_64.AppImag /.local/bin/appimages/
+sudo mv ~/Downloads/Cursor-0.49.6-x86_64.AppImage /.local/bin/appimages/
 ```
 
 Make the AppImage executable:
@@ -14,7 +14,12 @@ Make the AppImage executable:
 sudo chmod +x ~/.local/bin/appimages/Cursor-0.49.6-x86_64.AppImage
 ```
 
-## 3. Create a Desktop Entry
+## 3. Install Dependencies
+```bash
+sudo apt install fuse
+```
+
+## 4. Create a Desktop Entry
 ```bash
 sudo nano ~/.local/share/applications/cursor.desktop
 ```
@@ -23,7 +28,7 @@ Add the following content to the file:
 [Desktop Entry]
 Name=Cursor
 Comment=Cursor AI
-Exec=/home/username/.local/bin/appimages/Cursor-0.49.6-x86_64.AppImage
+Exec=/home/username/.local/bin/appimages/Cursor-0.49.6-x86_64.AppImage --no-sandbox
 Icon=/home/username/.local/share/icons/cursor.png
 Categories=Development;IDE;
 StartupNotify=true
@@ -32,25 +37,25 @@ Type=Application
 ```
 Replace `username` with your actual username.
 
-## 4. Add Icon
+## 5. Add Icon
 - Download the icon from the [Cursor website](https://www.cursor.com/downloads).
 - Save it in the `~/.local/share/icons/` directory as `cursor.png`.
 ```bash
 sudo mv ~/Downloads/cursor.png ~/.local/share/icons/
 ```
 
-## 5. Update Desktop Database
+## 6. Update Desktop Database
 ```bash
 update-desktop-database ~/.local/share/applications
 ```
 
-## 6. Launch Cursor
+## 7. Launch Cursor
 - You can now launch Cursor from the applications menu or by running:
 ```bash
 ~/.local/bin/appimages/Cursor-0.49.6-x86_64.AppImage
 ```
 
-## 7. Uninstalling Cursor
+## 8. Uninstalling Cursor
 To uninstall Cursor, simply delete the AppImage and the desktop entry:
 ```bash
 sudo rm ~/.local/bin/appimages/Cursor-0.49.6-x86_64.AppImage
