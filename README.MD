@@ -295,3 +295,14 @@ Certbot is a free, automated tool for obtaining and renewing SSL/TLS certificate
 - **Primary Uses**: SSL certificate management, HTTPS setup
 - **Example**: `certbot --nginx -d example.com`
 
+<br>
+<br>
+<br>
+
+## Others
+
+- Discord
+- Spotify
+- VLC
+- Flameshot
+- LibreOffice
