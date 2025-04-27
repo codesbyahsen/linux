@@ -1,5 +1,15 @@
 # Install phpMyAdmin on Ubuntu 24.04
 
+### Dependencies
+- **Nginx**: A high-performance web server.
+- **MySQL**: A popular open-source relational database management system.
+- **PHP**: A server-side scripting language.
+- **php-fpm**: A PHP FastCGI Process Manager.
+- **php-mysql**: A PHP extension for MySQL database connectivity.
+- **php-xml**: A PHP extension for XML parsing.
+- **php-mbstring**: A PHP extension for multibyte string handling.
+- **php-curl**: A PHP extension for making HTTP requests.
+
 ## 1. First, Update Package List
 Before installing any new package, it's a good practice to update the local package index:
 
